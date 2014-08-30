@@ -3,6 +3,6 @@ package mcid.anubisset.letsmodreboot.proxy;
 /**
  * Created by Luke on 26/08/2014.
  */
-public abstract class ClientProxy extends CommonProxy
+public class ClientProxy extends CommonProxy
 {
 }

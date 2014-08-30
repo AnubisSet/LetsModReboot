@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import mcid.anubisset.letsmodreboot.handler.ConfigurationHandler;
+import mcid.anubisset.letsmodreboot.init.ModBlocks;
 import mcid.anubisset.letsmodreboot.init.ModItems;
 import mcid.anubisset.letsmodreboot.proxy.IProxy;
 import mcid.anubisset.letsmodreboot.reference.Reference;
@@ -28,6 +29,8 @@ public class LetsModReboot
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
         ModItems.init();
+
+        ModBlocks.init();
         LogHelper.info("Pre Initialization Complete!");
     }
 

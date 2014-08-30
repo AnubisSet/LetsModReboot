@@ -2,6 +2,7 @@ package mcid.anubisset.letsmodreboot.item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import mcid.anubisset.letsmodreboot.creativetab.CreativeTabLMRB;
 import mcid.anubisset.letsmodreboot.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -15,6 +16,7 @@ public class ItemLMRB extends Item
     public ItemLMRB()
     {
         super();
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
     @Override

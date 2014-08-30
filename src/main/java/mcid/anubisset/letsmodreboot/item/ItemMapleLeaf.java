@@ -1,5 +1,7 @@
 package mcid.anubisset.letsmodreboot.item;
 
+import mcid.anubisset.letsmodreboot.creativetab.CreativeTabLMRB;
+
 /**
  * Created by Luke on 29/08/2014.
  */

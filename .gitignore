@@ -2,6 +2,7 @@
 
 build/
 eclipse/
+run/
 out/
 *.iml
 *.ipr

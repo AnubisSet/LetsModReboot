@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import mcid.anubisset.letsmodreboot.client.handler.KeyInputEventHandler;
 import mcid.anubisset.letsmodreboot.handler.ConfigurationHandler;
 import mcid.anubisset.letsmodreboot.init.ModBlocks;
 import mcid.anubisset.letsmodreboot.init.ModItems;
@@ -30,6 +31,8 @@ public class LetsModReboot
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        proxy.registerKeyBindings();
+
         ModItems.init();
 
         ModBlocks.init();
@@ -39,6 +42,7 @@ public class LetsModReboot
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         Recipes.init();
         LogHelper.info("Initialization Complete!");
     }

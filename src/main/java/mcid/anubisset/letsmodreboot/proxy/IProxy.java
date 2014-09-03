@@ -5,4 +5,5 @@ package mcid.anubisset.letsmodreboot.proxy;
  */
 public interface IProxy
 {
+    public abstract void registerKeyBindings();
 }

@@ -9,9 +9,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import mcid.anubisset.letsmodreboot.handler.ConfigurationHandler;
 import mcid.anubisset.letsmodreboot.init.ModBlocks;
 import mcid.anubisset.letsmodreboot.init.ModItems;
+import mcid.anubisset.letsmodreboot.init.Recipes;
 import mcid.anubisset.letsmodreboot.proxy.IProxy;
 import mcid.anubisset.letsmodreboot.reference.Reference;
 import mcid.anubisset.letsmodreboot.utility.LogHelper;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class LetsModReboot
@@ -37,6 +39,7 @@ public class LetsModReboot
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.info("Initialization Complete!");
     }
 
